@@ -43,6 +43,9 @@ add_library(gv_tools SHARED ${SRC_FILE_LIST})
 add_executable(track_dataset example/track_dataset.cpp)
 target_link_libraries(track_dataset gv_tools ${LIBS})
 
+add_executable(ipm_test example/ipm_test.cpp)
+target_link_libraries(ipm_test gv_tools ${LIBS})
+
 if(DEFINED CATKIN_DEVEL_PREFIX)
     find_package (catkin REQUIRED COMPONENTS
        roscpp
